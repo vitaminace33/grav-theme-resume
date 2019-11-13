@@ -1,11 +1,11 @@
 <div id="header">
     <div class="row">
         <div class="large-3 columns">
-            {% if site.title %}
-                <h2>{{ site.title }}</h2>
-            {% endif %}   
-            {% if site.description %}
-                <h6 class="light">{{ site.description }}</h6>
+            {% if header.name %}
+                <h2>{{ header.name }}</h2>
+            {% endif %}
+            {% if header.title %}
+                <h6 class="light">{{ header.title }}</h6>
             {% endif %}
         </div>
         <div class="large-3 columns">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="small-8 columns border-left light2 ">
                     <ul class="no-bullet">
-                        {% for item in site.address %}
+                        {% for item in header.address %}
                             <li>{{ item.line }}</li>
                         {% endfor %}
                     </ul>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="small-8 columns border-left light2">
                     <ul class="no-bullet">
-                        {% for item in site.contact %}
+                        {% for item in header.contact %}
                             <li>{{ item.line }}</li>
                         {% endfor %}
                     </ul>
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="large-2 columns text-right italic website">
-            <a href="http://{{ site.website }}">{{ site.website }}</a>
+            <a href="http://{{ header.website }}">{{ header.website }}</a>
         </div>
     </div>
 </div>
