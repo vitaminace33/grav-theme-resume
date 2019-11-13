@@ -7,7 +7,7 @@
     {% for item in module.header.interests %}
     <div class="large-3 small-6 medium-3 columns {% if loop.last %}end{% endif %} {% if item.animation %}animated {{ item.animation }}{% endif %}">
       <div class="int_icon">
-        <i class="fi-{{ item.icon }}"></i>
+        <i class="{{ item.icon }}"></i>
         <div class="activity">{{ item.activity }}</div>
       </div>
     </div>

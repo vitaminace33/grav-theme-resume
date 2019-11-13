@@ -96,7 +96,7 @@ p {
 .special i {
   text-align: center;
   position: relative;
-  top: 10%;
+  top: 26%; /*center fa icons*/
   font-size: 5rem;
 }
 .special .pointer {
