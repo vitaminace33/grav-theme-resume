@@ -4,23 +4,22 @@
 
     {% block content %}
 
-    <div class="large-6 columns">
-      {% for module in page.collection({'items':{'@taxonomy.category': 'left'},'order': {'by': 'date', 'dir': 'desc'}}) %}
-        {% if module.template %}
-          {% include 'layouts/' ~ module.template ~ '.html.twig' %}
-        {% endif %}
-      {% endfor %}
-    </div> 
+<div class="large-6 columns">
+        {% for module in collection %}
+            {% if 'left' in module.taxonomy.category %}
+                {% include 'layouts/' ~ module.template ~ '.html.twig' %}
+            {% endif %}
+        {% endfor %}
+</div>
 
-    <div class="large-6 columns">
-      {% for module in page.collection({'items':{'@taxonomy.category': 'right'},'order': {'by': 'date', 'dir': 'desc'}}) %}
-        {% if module.template %}
-          {% include 'layouts/' ~ module.template ~ '.html.twig' %}
-        {% endif %}
-      {% endfor %}
-     </div>
-  {% endblock %}
+<div class="large-6 columns">
+        {% for module in collection %}
+            {% if 'right' in module.taxonomy.category %}
+                {% include 'layouts/' ~ module.template ~ '.html.twig' %}
+            {% endif %}
+        {% endfor %}
+</div>
+
+    {% endblock %}
 
 {% endembed %}
-
-
