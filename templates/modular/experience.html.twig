@@ -1,10 +1,10 @@
 <div class="avoid_pagebreak">
-  <h4>{{ module.header.title }}</h4>
+  <h4>{{ header.title }}</h4>
 
-  {{ module.content }}
+  {{ content|raw }}
 
   <div class="row experience">
-    {% for item in module.header.experience %}
+    {% for item in header.experience %}
     <div class="large-6 medium-6 small-12 columns {% if loop.last %}end{% endif %} {% if item.animation %}animated {{ item.animation }}{% endif %}">
       <div class="year">{{ item.years }}</div>
       <div class="exp_data">

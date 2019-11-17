@@ -1,9 +1,9 @@
 <div class="avoid_pagebreak">
-  <h4>{{ module.header.title }}</h4>
+  <h4>{{ header.title }}</h4>
 
-  {{ module.content }}
+  {{ content }}
 
-  {% for row in module.header.specialities|batch(3) %}
+  {% for row in header.specialities|batch(3) %}
   <ul class="inline-list special {% if loop.first %}first{% endif %} {% if loop.last %}last{% endif %}">
     {% for item in row %}
     <li {% if item.animation %}class="animated {{ item.animation }}{% endif %}">
