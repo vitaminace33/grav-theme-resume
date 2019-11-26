@@ -2,23 +2,23 @@
 
 ![Resume](assets/readme_1.png)
 
-Resume by [Fernando Báez](https://www.behance.net/gallery/FREE-Resume-Template/15677411) is a Grav implementation of free PSD resume theme.
+Resume is a Grav implementation of the popular resume template by [Fernando Báez](https://www.behance.net/gallery/FREE-Resume-Template/15677411).
 
 # Features
 
-* Extraordinary resume theme, designed by [Fernando Báez](https://www.behance.net/gallery/FREE-Resume-Template/15677411)
-* Based on Foundation framework
-* Two-Column approach
-* Specialities layout with custom icons and descriptions
-* Design Skills layout with percentage grid
-* Language Skills layout with automatic pie charts
-* Education history special layout
-* Experience layout
-* Recognitions layout with SVG ribbon
-* Hobbies & Interests layout with custom icons and descriptions
-* Foundation Icon Fonts 3 (around 283 icons included)
-* Animate.css support in layouts. You can animate each separate element.
-* Fully responsive. Designed with mobile first approach.
+* Modular approach, with predefined modules:
+  * Education history;
+  * Experience summary;
+  * Specialities, with custom icons and descriptions;
+  * Hobbies, with custom icons and descriptions;  
+  * Skills, with percentage grid;
+  * Languages, with pie charts;
+  * Recognitions, with SVG ribbon.
+* Based on several open source frameworks.
+  * [Foundation 3](https://zurb.com/blog/foundation-3-the-most-advanced-responsive), including the icon set with around 283 icons.
+  * [Font Awesome](https://github.com/FortAwesome/Font-Awesome);
+  * [Animate.css](https://daneden.github.io/animate.css/) support for module;
+* Fully responsive, two-column format with a one-column variant for small displays.
 
 # Installation
 
