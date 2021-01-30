@@ -1,25 +1,19 @@
 {% set collection = page.collection %}
-
 {% embed 'partials/base.html.twig' %}
-
-    {% block content %}
-
+  {% block content %}
 <div class="large-6 columns">
-        {% for module in collection %}
-            {% if 'left' in module.taxonomy.category %}
-                {{ module.content|raw }}
-            {% endif %}
-        {% endfor %}
+    {% for module in collection %}
+      {% if 'left' in module.taxonomy.category %}
+        {{ module.content|raw }}
+      {% endif %}
+    {% endfor %}
 </div>
-
 <div class="large-6 columns">
-        {% for module in collection %}
-            {% if 'right' in module.taxonomy.category %}
-                {{ module.content|raw }}
-            {% endif %}
-        {% endfor %}
+    {% for module in collection %}
+      {% if 'right' in module.taxonomy.category %}
+        {{ module.content|raw }}
+      {% endif %}
+    {% endfor %}
 </div>
-
-    {% endblock %}
-
+  {% endblock %}
 {% endembed %}

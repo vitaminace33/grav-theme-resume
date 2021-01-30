@@ -1,43 +1,43 @@
 <div id="header">
-    <div class="row">
-        <div class="large-3 columns">
-            {% if header.name %}
-                <h2>{{ header.name }}</h2>
-            {% endif %}
-            {% if header.title %}
-                <h6 class="light">{{ header.title }}</h6>
-            {% endif %}
-        </div>
-        <div class="large-3 columns">
-            <div class="row">
-                <div class="small-4 columns light2 italic">
-                    Address:
-                </div>
-                <div class="small-8 columns border-left light2 ">
-                    <ul class="no-bullet">
-                        {% for item in header.address %}
-                            <li>{{ item.line }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="large-3 columns">
-            <div class="row">
-                <div class="small-4 columns light2 italic">
-                    Contact:
-                </div>
-                <div class="small-8 columns border-left light2">
-                    <ul class="no-bullet">
-                        {% for item in header.contact %}
-                            <li>{{ item.line }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="large-2 columns text-right italic website">
-            <a href="http://{{ header.website }}">{{ header.website }}</a>
-        </div>
+  <div class="row">
+    <div class="large-3 columns">
+{% if header.name %}
+      <h2>{{ header.name }}</h2>
+{% endif %}
+{% if header.title %}
+      <h6 class="light">{{ header.title }}</h6>
+{% endif %}
     </div>
+    <div class="large-3 columns">
+      <div class="row">
+        <div class="small-4 columns light2 italic">
+          Address:
+        </div>
+        <div class="small-8 columns border-left light2 ">
+          <ul class="no-bullet">
+{% for item in header.address %}
+            <li>{{ item.line|raw }}</li>
+{% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="large-3 columns">
+      <div class="row">
+        <div class="small-4 columns light2 italic">
+          Contact:
+        </div>
+        <div class="small-8 columns border-left light2">
+          <ul class="no-bullet">
+{% for item in header.contact %}
+            <li>{{ item.line|raw }}</li>
+{% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="large-2 columns text-right italic website">
+      <a href="http://{{ header.website }}">{{ header.website }}</a>
+    </div>
+  </div>
 </div>
